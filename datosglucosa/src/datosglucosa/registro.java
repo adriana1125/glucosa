@@ -6,7 +6,7 @@ public class registro {
 	private double glucosa; 
 	private LocalDate fecha;
 	public registro() {}
-		public registro(String nombre, double glucosa) {
+		public registro(String nombre, double glucosa, LocalDate fecha) {
 			this.nombre= nombre;
 			this.glucosa= glucosa;
 			this.fecha= fecha;
