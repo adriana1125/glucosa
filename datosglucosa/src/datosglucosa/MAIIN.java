@@ -13,6 +13,8 @@ import java.awt.event.ActionListener;
 import java.awt.event.ActionEvent;
 import java.util.ArrayList;
 import java.util.List;
+import javax.swing.JTabbedPane;
+import javax.swing.JToolBar;
 public class MAIIN extends JFrame {
 
 	private static final long serialVersionUID = 1L;
@@ -49,28 +51,42 @@ public class MAIIN extends JFrame {
 		setContentPane(contentPane);
 		contentPane.setLayout(null);
 		
-		textField = new JTextField();
-		textField.setBounds(229, 74, 86, 20);
-		contentPane.add(textField);
-		textField.setColumns(10);
+		JTabbedPane tabbedPane = new JTabbedPane(JTabbedPane.TOP);
+		tabbedPane.setBounds(22, 22, 404, 241);
+		contentPane.add(tabbedPane);
+		
+		JToolBar toolBar = new JToolBar();
+		toolBar.setToolTipText("");
+		tabbedPane.addTab("Registro", null, toolBar, null);
+		
+		JPanel panel = new JPanel();
+		toolBar.add(panel);
+		panel.setLayout(null);
 		
 		JLabel lblNOMBRE = new JLabel("Nombre: ");
-		lblNOMBRE.setBounds(127, 77, 92, 14);
-		contentPane.add(lblNOMBRE);
+		lblNOMBRE.setBounds(81, 20, 92, 14);
+		panel.add(lblNOMBRE);
+		
+		textField = new JTextField();
+		textField.setBounds(152, 18, 86, 20);
+		panel.add(textField);
+		textField.setColumns(10);
 		
 		JLabel lblGLUCOSA = new JLabel("Glucosa:");
-		lblGLUCOSA.setBounds(127, 111, 92, 14);
-		contentPane.add(lblGLUCOSA);
+		lblGLUCOSA.setBounds(81, 59, 92, 14);
+		panel.add(lblGLUCOSA);
 		
 		
 		
 		
 		textField_1 = new JTextField();
-		textField_1.setBounds(229, 108, 86, 20);
-		contentPane.add(textField_1);
+		textField_1.setBounds(152, 57, 86, 20);
+		panel.add(textField_1);
 		textField_1.setColumns(10);
 		
 		JButton btnGUARDAR = new JButton("Guardar");
+		btnGUARDAR.setBounds(129, 136, 89, 23);
+		panel.add(btnGUARDAR);
 		btnGUARDAR.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
 
@@ -80,8 +96,13 @@ public class MAIIN extends JFrame {
 
 			}
 		});
-		btnGUARDAR.setBounds(167, 227, 89, 23);
-		contentPane.add(btnGUARDAR);
+		
+		JToolBar toolBar_1 = new JToolBar();
+		tabbedPane.addTab("Historial", null, toolBar_1, null);
+		
+		JPanel panel_1 = new JPanel();
+		toolBar_1.add(panel_1);
+		panel_1.setLayout(null);
 		
 	
 	}
