@@ -15,6 +15,7 @@ import java.util.ArrayList;
 import java.util.List;
 import javax.swing.JTabbedPane;
 import javax.swing.JToolBar;
+import javax.swing.JList;
 public class MAIIN extends JFrame {
 
 	private static final long serialVersionUID = 1L;
@@ -103,6 +104,14 @@ public class MAIIN extends JFrame {
 		JPanel panel_1 = new JPanel();
 		toolBar_1.add(panel_1);
 		panel_1.setLayout(null);
+		
+		JList list = new JList();
+		list.setBounds(10, 10, 366, 135);
+		panel_1.add(list);
+		
+		JButton btnMostrarlista = new JButton("Mostrar lista");
+		btnMostrarlista.setBounds(127, 155, 132, 20);
+		panel_1.add(btnMostrarlista);
 		
 	
 	}
